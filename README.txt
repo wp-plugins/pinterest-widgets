@@ -7,7 +7,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Various widgets for Pinterest including the Follow Button, Pin Widget, Profile Widget and Board Widget.
+Various widgets for Pinterest including the Follow Button, Pin Widget, Profile Widget and Board Widget. Includes shortcodes.
 
 == Description ==
 
@@ -21,6 +21,7 @@ Includes:
 * Pin widget: Embed one of your Pins on your site.
 * Profile widget: Show up to 30 of your latest Pins on your site.
 * Board widget: Show up to 30 of your favorite board’s latest Pins.
+* Shortcodes for all 4 widgets.
 
 The "Pin It" Button widget is *not* included in this plugin and is instead included in the separate [Pinterest "Pin It" Button plugin](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets)).
 
