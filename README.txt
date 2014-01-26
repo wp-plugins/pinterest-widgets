@@ -46,7 +46,7 @@ The "Pin It" Button widget is *not* included in this plugin and is instead inclu
 = 3. FTP Upload =
 1. Download the plugin (.zip file) on the right column of this page.
 1. Unzip the zip file contents.
-1. Upload the `pinterest-pin-it-button` folder to the `/wp-content/plugins/` directory of your site.
+1. Upload the `pinterest-widgets` folder to the `/wp-content/plugins/` directory of your site.
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 1. Go to Appearance > Widgets to add widgets to your site.
 
