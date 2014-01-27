@@ -137,3 +137,14 @@ function pw_rss_news() {
 
 <?php
 }
+
+/**
+ * Check if the "Pin It" Button Pro plugin is active.
+ *
+ * @since   1.0.1
+ *
+ * @return  boolean
+ */
+function pw_is_pib_pro_active() {
+	return class_exists( 'Pinterest_Pin_It_Button_Pro' );
+}

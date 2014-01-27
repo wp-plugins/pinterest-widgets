@@ -13,6 +13,8 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 ?>
 
+<?php if ( ! pw_is_pib_pro_active() ): // If "Pin It" Button Pro is already active don't show. ?>
+
 <div class="sidebar-container">
 	<h3 class="sidebar-title-medium"><?php _e( 'Need an awesome "Pin It" button?', 'pw' ); ?></h3>
 
@@ -45,6 +47,8 @@ if ( ! defined( 'ABSPATH' ) )
 		</p>
 	</div>
 </div>
+
+<?php endif; // End "Pin It" Button Pro check. ?>
 
 <div class="sidebar-container">
 	<div class="sidebar-content">
