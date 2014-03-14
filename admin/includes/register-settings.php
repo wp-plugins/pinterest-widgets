@@ -12,6 +12,12 @@
 if ( ! defined( 'ABSPATH' ) )
 	exit;
 
+/**
+ * Register all settings for the plugin
+ *
+ * @since     1.0.0
+ *
+ */
 function pw_register_settings() {
 	$pw_settings = array(
 
@@ -73,7 +79,6 @@ add_action( 'admin_init', 'pw_register_settings' );
  * @param   string  $section  Section of settings apge.
  * @return  array             $args parameter to use with add_settings_field call.
  */
-
 function pw_get_settings_field_args( $option, $section ) {
 	$settings_args = array(
 		'id'      => $option['id'],

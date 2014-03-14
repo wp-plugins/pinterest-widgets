@@ -34,7 +34,8 @@ class PW_Pin_Widget extends WP_Widget {
 	 * Return public facing code for the Pinterest Pin Widget
 	 *
 	 * @since     1.0.0
-	 *
+	 * @modified  1.0.1
+	 * 
 	 * @return    string
 	 */
 	public function widget( $args, $instance ) {
@@ -50,7 +51,13 @@ class PW_Pin_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo '<div class="pw-wrap pw-widget pw-pin-widget">' . pw_pin_link( $pin_url, '', 'embedPin' ) . '</div>';
+		$html = '<div class="pw-wrap pw-widget pw-pin-widget">' . pw_pin_link( $pin_url, '', 'embedPin' ) . '</div>';
+		
+		do_action( 'pw_pin_widget_before' );
+		
+		echo apply_filters( 'pw_pin_widget_html', $html );
+		
+		do_action( 'pw_pin_widget_after' );
 		
 		echo $after_widget;
 	}

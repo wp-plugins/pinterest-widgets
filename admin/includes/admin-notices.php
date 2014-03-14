@@ -13,11 +13,11 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 
 /**
-	 * Add save settings message for admin settings
-	 *
-	 * @since     1.0.0
-	 *
-	 */
+ * Add save settings message for admin settings
+ *
+ * @since     1.0.0
+ *
+ */
 function pw_register_admin_notices() { 
 	
 	if ( ( isset( $_GET['page'] ) && 'pinterest-widgets' == $_GET['page'] ) && ( isset( $_GET['settings-updated'] ) && 'true' == $_GET['settings-updated'] ) ) {
@@ -25,5 +25,4 @@ function pw_register_admin_notices() {
 	}
 
 }
-
 add_action( 'admin_notices', 'pw_register_admin_notices' );

@@ -34,7 +34,8 @@ class PW_Follow_Button_Widget extends WP_Widget {
 	 * Return public facing code for the Pinterest Follow Button Widget
 	 *
 	 * @since     1.0.0
-	 *
+	 * @modified  1.0.1
+	 * 
 	 * @return    string
 	 */
 	public function widget( $args, $instance ) {
@@ -52,7 +53,14 @@ class PW_Follow_Button_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo '<div class="pw-wrap pw-widget pw-follow-button-widget">' . pw_pin_follow( $pin_username, $button_label ) . '</div>';
+		$html = '<div class="pw-wrap pw-widget pw-follow-button-widget">' . pw_pin_follow( $pin_username, $button_label ) . '</div>';
+		
+		do_action( 'pw_follow_button_before' );
+		
+		echo apply_filters( 'pw_follow_button_html', $html );
+		
+		do_action( 'pw_follow_button_after' );
+		
 		
 		echo $after_widget;
 	}

@@ -9,12 +9,12 @@
  */
 
 /**
-	 * Return the HTML output for the Pinterest Pin Widget
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    string
-	 */
+ * Return the HTML output for the Pinterest Pin Widget
+ *
+ * @since     1.0.0
+ *
+ * @return    string
+ */
 function pw_pin_link( $url, $label, $action ) {
 	
 	$pin_link = '<a data-pin-do="' . $action . '" href="' . esc_attr( $url ) . '">' . $label . '</a>';
@@ -23,12 +23,12 @@ function pw_pin_link( $url, $label, $action ) {
 }
 
 /**
-	 * Return the HTML output for the Pinterest Follow Button
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    string
-	 */
+ * Return the HTML output for the Pinterest Follow Button
+ *
+ * @since     1.0.0
+ *
+ * @return    string
+ */
 function pw_pin_follow( $username, $label ) {
 	
 	$pin_follow = '<a data-pin-do="buttonFollow" href="http://www.pinterest.com/' . esc_attr( $username ) . '/">' . $label . '</a>';
@@ -37,12 +37,12 @@ function pw_pin_follow( $username, $label ) {
 }
 
 /**
-	 * Return the HTML output for the Pinterest Profile Widget or Pinterest Board Widget
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    string
-	 */
+ * Return the HTML output for the Pinterest Profile Widget or Pinterest Board Widget
+ *
+ * @since     1.0.0
+ *
+ * @return    string
+ */
 function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 	
 	// Default size options based on option "Square" from Pinterest

@@ -34,7 +34,8 @@ class PW_Profile_Widget extends WP_Widget {
 	 * Return public facing code for the Pinterest Profile Widget
 	 *
 	 * @since     1.0.0
-	 *
+	 * @modified  1.0.1
+	 * 
 	 * @return    string
 	 */
 	public function widget( $args, $instance ) {
@@ -60,7 +61,13 @@ class PW_Profile_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo '<div class="pw-wrap pw-widget pw-profile-widget">' . pw_widget_boards( $pin_username, '', $profile_widget_size, $custom_sizes, 'embedUser' ) . '</div>';
+		$html = '<div class="pw-wrap pw-widget pw-profile-widget">' . pw_widget_boards( $pin_username, '', $profile_widget_size, $custom_sizes, 'embedUser' ) . '</div>';
+		
+		do_action( 'pw_profile_widget_before' );
+		
+		echo apply_filters( 'pw_profile_widget_html', $html );
+		
+		do_action( 'pw_profile_widget_after' );
 		
 		echo $after_widget;
 	}

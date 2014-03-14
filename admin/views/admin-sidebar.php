@@ -41,10 +41,6 @@ if ( ! defined( 'ABSPATH' ) )
 		<a href="http://pinterestplugin.com/pin-it-button-pro/?utm_source=pinterest_widgets&utm_medium=sidebar_link&utm_campaign=pro_upgrade"
 		   class="btn btn-large btn-block btn-danger" target="_blank">
 			<?php _e( 'Get "Pin It" Pro Now', 'pw' ); ?></a>
-		<br/>
-		<p style="text-align: center;">
-			<?php _e( 'Enter discount code <strong>WIDGETLAUNCH</strong> to get a <strong>10% discount</strong> until March 31, 2014!', 'pw' ); ?>
-		</p>
 	</div>
 </div>
 

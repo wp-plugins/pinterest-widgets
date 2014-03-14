@@ -9,7 +9,6 @@
 ?>
 
 <div class="wrap">
-
 	<div id="pw-settings">
 		<div id="pw-settings-content">
 			

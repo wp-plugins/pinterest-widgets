@@ -18,7 +18,7 @@ class PW_Board_Widget extends WP_Widget {
 	 * Create the new Pinterest Board Widget in the admin
 	 *
 	 * @since     1.0.0
-	 *
+	 * @modified  1.0.1
 	 */
 	public function __construct() {
 		parent::__construct(
@@ -60,7 +60,13 @@ class PW_Board_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo '<div class="pw-wrap pw-widget pw-board-widget">' . pw_widget_boards( $board_url, '', $board_size, $custom_sizes, 'embedBoard' ) . '</div>';
+		$html = '<div class="pw-wrap pw-widget pw-board-widget">' . pw_widget_boards( $board_url, '', $board_size, $custom_sizes, 'embedBoard' ) . '</div>';
+		
+		do_action( 'pw_board_widget_before' );
+		
+		echo apply_filters( 'pw_board_widget_html', $html );
+		
+		do_action( 'pw_board_widget_after' );
 		
 		echo $after_widget;
 	}
