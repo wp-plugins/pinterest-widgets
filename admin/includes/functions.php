@@ -8,6 +8,12 @@
  * @author     Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  */
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 /**
  * Return the HTML output for the Pinterest Pin Widget
  *
@@ -88,7 +94,7 @@ function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 }
 
 /**
- * Render RSS items from pinterestplugin.com in unordered list.
+ * Render RSS items from pinplugins.com in unordered list.
  * http://codex.wordpress.org/Function_Reference/fetch_feed
  * Based on pib_rss_news() in Pin it button plugin.
  *
@@ -100,7 +106,7 @@ function pw_rss_news() {
 	include_once( ABSPATH . WPINC . '/feed.php' );
 
 	// Get a SimplePie feed object from the specified feed source.
-	$rss = fetch_feed( 'http://pinterestplugin.com/feed/' );
+	$rss = fetch_feed( PINPLUGIN_BASE_URL . 'feed/' );
 
 	if ( ! is_wp_error( $rss ) ) {
 		// Checks that the object is created correctly.

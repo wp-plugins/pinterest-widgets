@@ -4,6 +4,11 @@
  * FILTER HOOKS
  ************************/
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Modify the HTML output of the Follow Button shortcode
  * 

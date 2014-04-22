@@ -21,7 +21,7 @@ Includes:
 * Board widget: Show up to 30 of your favorite board’s latest Pins.
 * Shortcodes for all 4 widgets.
 
-The "Pin It" Button widget is *not* included in this plugin and is instead included in the separate [Pinterest "Pin It" Button plugin](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets)), which we also created.
+The "Pin It" Button widget is *not* included in this plugin and is instead included in the separate [Pinterest "Pin It" Button plugin](http://pinplugins.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinplugins.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets)), which we also created.
 
 [Follow this project on Github](https://github.com/pderksen/WP-Pinterest-Widgets).
 
@@ -73,6 +73,10 @@ Shortcode help available within the plugin admin.
 8. Board widget settings
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Updated code to only include JS and CSS if there is a widget/shortcode on the page.
 
 = 1.0.1 =
 

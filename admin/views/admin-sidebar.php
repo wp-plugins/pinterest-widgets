@@ -9,8 +9,9 @@
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) )
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
 ?>
 
 <?php if ( ! pw_is_pib_pro_active() ): // If "Pin It" Button Pro is already active don't show. ?>
@@ -38,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) )
 			<?php _e( 'Get all of these and more with Pinterest "Pin It" Button Pro!', 'pw' ); ?>
 		</p>
 
-		<a href="http://pinterestplugin.com/pin-it-button-pro/?utm_source=pinterest_widgets&utm_medium=sidebar_link&utm_campaign=pro_upgrade"
+		<a href="<?php echo PINPLUGIN_BASE_URL; ?>pin-it-button-pro/?utm_source=pinterest_widgets&utm_medium=sidebar_link&utm_campaign=pro_upgrade"
 		   class="btn btn-large btn-block btn-danger" target="_blank">
 			<?php _e( 'Get "Pin It" Pro Now', 'pw' ); ?></a>
 	</div>

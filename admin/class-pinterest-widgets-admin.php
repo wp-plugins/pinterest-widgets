@@ -6,6 +6,11 @@
  * @subpackage admin
  * @author     Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  */
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 
 class Pinterest_Widgets_Admin {
 
@@ -34,6 +39,8 @@ class Pinterest_Widgets_Admin {
 	 * @since     1.0.0
 	 */
 	private function __construct() {
+		
+		$this->setup_constants();
 
 		$plugin = Pinterest_Widgets::get_instance();
 		$this->plugin_slug = $plugin->get_plugin_slug();
@@ -53,6 +60,42 @@ class Pinterest_Widgets_Admin {
 		
 		// Check WP version
 		add_action( 'admin_init', array( $this, 'check_wp_version' ) );
+		
+		// Add admin notice after plugin activation. Also check if should be hidden.
+		add_action( 'admin_notices', array( $this, 'admin_install_notice' ) );
+	}
+	
+	/**
+	 * Fired when the plugin is activated.
+	 *
+	 * @since    2.0.0
+	 */
+	public static function activate() {
+		update_option( 'pw_show_admin_install_notice', 1 );
+	}
+	
+	public function admin_install_notice() {
+		// Exit all of this is stored value is false/0 or not set.
+		if ( false == get_option( 'pw_show_admin_install_notice' ) )
+			return;
+
+		// Delete stored value if "hide" button click detected (custom querystring value set to 1).
+		// or if on a PIB admin page. Then exit.
+		if ( ! empty( $_REQUEST['pw-dismiss-install-nag'] ) || $this->viewing_this_plugin() || get_current_screen()->id == 'widgets' ) {
+			delete_option( 'pw_show_admin_install_notice' );
+			return;
+		}
+
+		// At this point show install notice. Show it only on the plugin screen.
+		if( get_current_screen()->id == 'plugins' ) {
+			include_once( 'views/admin-install-notice.php' );
+		}
+	}
+	
+	public function setup_constants() {
+		if( ! defined( 'PINPLUGIN_BASE_URL' ) ) {
+			define( 'PINPLUGIN_BASE_URL', 'http://pinplugins.com/' );
+		}
 	}
 	
 	/**
@@ -207,6 +250,27 @@ class Pinterest_Widgets_Admin {
 	 */
 	function get_plugin_title() {
 		return __( 'Pinterest Widgets', 'pw' );
+	}
+	
+	/**
+	 * Check if viewing one of this plugin's admin pages.
+	 *
+	 * @since   2.0.0
+	 *
+	 * @return  bool
+	 */
+	private function viewing_this_plugin() {
+		if ( ! isset( $this->plugin_screen_hook_suffix ) ) {
+			return false;
+		}
+
+		$screen = get_current_screen();
+
+		if ( $screen->id == $this->plugin_screen_hook_suffix ) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

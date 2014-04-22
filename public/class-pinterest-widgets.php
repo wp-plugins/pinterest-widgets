@@ -7,6 +7,11 @@
  * @author     Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  */
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class Pinterest_Widgets {
 
 	/**
@@ -16,7 +21,7 @@ class Pinterest_Widgets {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.1';
+	const VERSION = '1.0.2';
 
 	/**
 	 * Unique identifier for this plugin.
@@ -67,12 +72,30 @@ class Pinterest_Widgets {
 	*/
 	public function enqueue_scripts() {
 		
-		global $pw_options;
+		global $pw_options, $post;
 		
-		// Enqueue pinit.js - will need to add some kind of check here to make sure this will not be called if PIB is running
-		// For now going to just check for either PIB Lite or Pro classes
-		if( empty( $pw_options['no_pinit_js'] ) )
-			wp_enqueue_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), null, true );
+		$content = $post->post_content;
+		
+		$loadJS = false;
+		
+		// Need to check if there are any widgets or shortcodes before loading the JS so that we only add JS if needed
+		// Check for shortcodes
+		if( has_shortcode( $content, 'pin_follow' ) || has_shortcode( $content, 'pin_widget' ) || has_shortcode( $content, 'pin_board' ) || has_shortcode( $content, 'pin_profile' ) ) {
+			$loadJS = true;
+		}
+		
+		// Check for widgets
+		if( is_active_widget( false, false, 'pw_board_widget', true ) || is_active_widget( false, false, 'pw_follow_button_widget', true ) || 
+				is_active_widget( false, false, 'pw_pin_widget', true ) || is_active_widget( false, false, 'pw_profile_widget', true ) ) {
+			$loadJS = true;
+		}
+		
+		if( $loadJS ) {
+			// Enqueue pinit.js
+			if( empty( $pw_options['no_pinit_js'] ) ) {
+				wp_enqueue_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), null, true );
+			}
+		}
 	}
 	
 	/**
