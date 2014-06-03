@@ -1,0 +1,433 @@
+# Copyright (C) 2014 Pinterest Widgets
+# This file is distributed under the same license as the Pinterest Widgets package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinterest Widgets 1.0.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/pinterest-widgets\n"
+"POT-Creation-Date: 2014-05-20 07:12:17+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-27 10:37+0100\n"
+"Last-Translator: jelena kovacevic <jecajeca260@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: admin/class-pinterest-widgets-admin.php:203
+msgid " Settings"
+msgstr "Ajustes"
+
+#. #-#-#-#-#  plugin.pot (Pinterest Widgets 1.0.2)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: admin/class-pinterest-widgets-admin.php:204
+#: admin/class-pinterest-widgets-admin.php:252
+msgid "Pinterest Widgets"
+msgstr "Pinterest Widgets"
+
+#: admin/class-pinterest-widgets-admin.php:238
+msgid "Settings"
+msgstr "Ajustes"
+
+#: admin/includes/admin-notices.php:25
+msgid "Settings updated."
+msgstr "Ajustes actualizados."
+
+#: admin/includes/functions.php:123
+msgid "No items."
+msgstr "No hay elementos."
+
+#: admin/includes/register-settings.php:29
+msgid "Disable <code>pinit.js</code>"
+msgstr "Deshabilitar <code>pinit.js</code>"
+
+#: admin/includes/register-settings.php:30
+msgid ""
+"Disable output of <code>pinit.js</code>, the JavaScript file for all widgets "
+"from Pinterest."
+msgstr ""
+"Deshabilitar salida de <code>pinit.js</code>, el archivo JavaScript para "
+"todos los widgets de Pinterest."
+
+#: admin/includes/register-settings.php:37
+msgid "Save Settings"
+msgstr "Salvar Ajustes"
+
+#: admin/includes/register-settings.php:38
+msgid ""
+"Save your settings when uninstalling this plugin. Useful when upgrading or "
+"re-installing."
+msgstr ""
+"Salvar sus ajustes cuando se instala este plugin. Útil cuando se actualiza o "
+"se reinstala."
+
+#: admin/includes/register-settings.php:52
+msgid "General Settings"
+msgstr "Ajustes Generales"
+
+#: admin/includes/register-settings.php:142
+msgid ""
+"The callback function used for the <strong>%s</strong> setting is missing."
+msgstr ""
+"La función de callback usada para el ajuste <strong>%s</strong> no existe."
+
+#: admin/includes/widget-board.php:27
+msgid "Pinterest Board Widget"
+msgstr "Widget de Board de Pinterest "
+
+#: admin/includes/widget-board.php:29
+msgid "Add a Pinterest Board Widget to any widget area."
+msgstr "Adicionar Widget de Board de Pinterest a cualquier área de widget."
+
+#: admin/includes/widget-board.php:128
+#: admin/includes/widget-follow-button.php:111
+#: admin/includes/widget-pin.php:105 admin/includes/widget-profile.php:129
+msgid "Title (optional):"
+msgstr "Título (opcional):"
+
+#: admin/includes/widget-board.php:132
+msgid "Pinterest Board URL:"
+msgstr "URL de Pinterest Board:"
+
+#: admin/includes/widget-board.php:136
+msgid "Board Size:"
+msgstr "Tamaño del Board:"
+
+#: admin/includes/widget-board.php:138 admin/includes/widget-profile.php:139
+msgid "Square"
+msgstr "Cuadrado"
+
+#: admin/includes/widget-board.php:139 admin/includes/widget-profile.php:140
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: admin/includes/widget-board.php:140 admin/includes/widget-profile.php:141
+msgid "Header"
+msgstr "Encabezado"
+
+#: admin/includes/widget-board.php:141 admin/includes/widget-profile.php:142
+msgid "Custom"
+msgstr "Personalizado"
+
+#: admin/includes/widget-board.php:145
+msgid "The following values are used only with a 'Custom' board size"
+msgstr ""
+"Los siguientes valores son usados solo con un tamaño de board ‘Personalizado’"
+
+#: admin/includes/widget-board.php:148 admin/includes/widget-profile.php:149
+msgid "Image Width:"
+msgstr "Ancho de Imagen:"
+
+#: admin/includes/widget-board.php:152 admin/includes/widget-profile.php:153
+msgid "Board Height:"
+msgstr "Largo de Board:"
+
+#: admin/includes/widget-board.php:156 admin/includes/widget-profile.php:157
+msgid "Board Width:"
+msgstr "Ancho de Board:"
+
+#: admin/includes/widget-follow-button.php:27
+msgid "Pinterest Follow Button"
+msgstr "Botón de Seguir de Pinterest "
+
+#: admin/includes/widget-follow-button.php:29
+msgid "Add a Pinterest Follow Button to any widget area."
+msgstr "Adicionar un Botón de Seguir de Pinterest a cualquier área de widget."
+
+#: admin/includes/widget-follow-button.php:115
+#: admin/includes/widget-profile.php:133
+msgid "Pinterest Username:"
+msgstr "Usuario de Pinterest:"
+
+#: admin/includes/widget-follow-button.php:119
+msgid "Button Label:"
+msgstr "Etiqueta del Botón:"
+
+#: admin/includes/widget-pin.php:27
+msgid "Pinterest Pin Widget"
+msgstr "Widget de Pin de Pinterest "
+
+#: admin/includes/widget-pin.php:29
+msgid "Add a Pinterest Pin Widget to any widget area."
+msgstr "Adicionar un Widget de Pin de Pinterest a cualquier área de widget."
+
+#: admin/includes/widget-pin.php:109
+msgid "Pin URL:"
+msgstr "Pin URL:"
+
+#: admin/includes/widget-profile.php:27
+msgid "Pinterest Profile Widget"
+msgstr "Widget de Perfil de Pinterest "
+
+#: admin/includes/widget-profile.php:29
+msgid "Add a Pinterest Profile Widget to any widget area."
+msgstr "Adicionar un Widget de Pinterest Profile a cualquier área de widget."
+
+#: admin/includes/widget-profile.php:137
+msgid "Widget Size:"
+msgstr "Tamaño del Widget:"
+
+#: admin/includes/widget-profile.php:146
+msgid "The following values are used only with a 'Custom' widget size"
+msgstr ""
+"Los siguientes valores son usados solo con un tamaño de widget "
+"'Personalizado'"
+
+#: admin/views/admin-install-notice.php:27
+msgid " is now installed."
+msgstr "está ahora instalado."
+
+#: admin/views/admin-install-notice.php:28
+msgid "Pinterest widgets are now active in Appearance"
+msgstr "Los widgets Pinterest  están ahora activos en Apariencia"
+
+#: admin/views/admin-install-notice.php:28
+msgid "Widgets"
+msgstr "Widgets"
+
+#: admin/views/admin-sidebar.php:20
+msgid "Need an awesome \"Pin It\" button?"
+msgstr "¿Necesita un botón \"Pin It\" asombroso?"
+
+#: admin/views/admin-sidebar.php:24
+msgid "Check out the features in \"Pin It\" Pro..."
+msgstr "Chequee las características en \"Pin It\" Pro..."
+
+#: admin/views/admin-sidebar.php:28
+msgid "Add \"Pin It\" buttons on image hover"
+msgstr "Adicionar botones \"Pin It\" o hover de imagen"
+
+#: admin/views/admin-sidebar.php:29
+msgid "Add \"Pin It\" buttons under images"
+msgstr "Adicionar botones \"Pin It\" debajo de las imágenes "
+
+#: admin/views/admin-sidebar.php:30
+msgid "30 custom \"Pin It\" button designs"
+msgstr "30 diseños de botones \"Pin It\" personalizados"
+
+#: admin/views/admin-sidebar.php:31
+msgid "Upload your own button designs"
+msgstr "Suba sus propios diseños de botón"
+
+#: admin/views/admin-sidebar.php:32
+msgid "Twitter, Facebook & G+ buttons"
+msgstr "Botones Twitter, Facebook y G+"
+
+#: admin/views/admin-sidebar.php:33
+msgid "Use with featured images"
+msgstr "Usar con imágenes personalizadas"
+
+#: admin/views/admin-sidebar.php:34
+msgid "Use with custom post types"
+msgstr "Usar con tipos de post personalizados"
+
+#: admin/views/admin-sidebar.php:35
+msgid "Customer support & auto updates"
+msgstr "Soporte del cliente y auto updates"
+
+#: admin/views/admin-sidebar.php:39
+msgid "Get all of these and more with Pinterest \"Pin It\" Button Pro!"
+msgstr "¡Obtener todo esto y más con Pinterest \"Pin It\" Button Pro"
+
+#: admin/views/admin-sidebar.php:44
+msgid "Get \"Pin It\" Pro Now"
+msgstr "Obtener \"Pin It\" Pro Ahora"
+
+#: admin/views/admin-sidebar.php:53
+msgid ""
+"Help us get noticed (and boost our egos) with a rating and short review."
+msgstr ""
+"Ayúdenos a notarnos (y suba nuestro ego) con un rankeo y un comentario corto."
+
+#: admin/views/admin-sidebar.php:57
+msgid "Rate this plugin on WordPress.org"
+msgstr "Rankee este plugin en WordPress.org"
+
+#: admin/views/admin-sidebar.php:67
+msgid "Community Support Forums"
+msgstr "Foros de Soporte de la Comunidad"
+
+#: admin/views/admin-sidebar.php:74
+msgid "Recent News from PinterestPlugin.com"
+msgstr "Noticias Recientes de PinterestPlugin.com"
+
+#: admin/views/admin.php:24
+msgid "Go to Appearance"
+msgstr "Ir a Apariencia"
+
+#: admin/views/admin.php:25
+msgid "to add Pinterest widgets to your sidebar and other widget areas."
+msgstr "para adicionar widgets Pinterest a su sidebar y otras áreas de widget."
+
+#: admin/views/admin.php:38
+msgid "Shortcode Help"
+msgstr "Ayuda de Código Corto"
+
+#: admin/views/admin.php:42
+msgid "Follow Button"
+msgstr "Botón de Seguir"
+
+#: admin/views/admin.php:45 admin/views/admin.php:87 admin/views/admin.php:124
+#: admin/views/admin.php:194
+msgid "Use the shortcode"
+msgstr "Utilice el código corto"
+
+#: admin/views/admin.php:45
+msgid "to display the Pinterest Follow Button within your content."
+msgstr "para mostrar el Botón de Seguir de Pinterest en su contenido."
+
+#: admin/views/admin.php:48 admin/views/admin.php:90 admin/views/admin.php:127
+#: admin/views/admin.php:197
+msgid "Use the function"
+msgstr "Use la función"
+
+#: admin/views/admin.php:49 admin/views/admin.php:91 admin/views/admin.php:128
+#: admin/views/admin.php:198
+msgid "to display within template or theme files."
+msgstr "para mostrar en los archivos de plantilla o tema."
+
+#: admin/views/admin.php:52 admin/views/admin.php:94 admin/views/admin.php:131
+#: admin/views/admin.php:201
+msgid "Available Attributes"
+msgstr "Atributos Disponibles"
+
+#: admin/views/admin.php:57 admin/views/admin.php:99 admin/views/admin.php:136
+#: admin/views/admin.php:206
+msgid "Attribute"
+msgstr "Atributo"
+
+#: admin/views/admin.php:58 admin/views/admin.php:100
+#: admin/views/admin.php:137 admin/views/admin.php:207
+msgid "Description"
+msgstr "Descripción"
+
+#: admin/views/admin.php:59 admin/views/admin.php:101
+#: admin/views/admin.php:139 admin/views/admin.php:209
+msgid "Default"
+msgstr "Por Defecto"
+
+#: admin/views/admin.php:65
+msgid "Your Pinterest username"
+msgstr "Su usuario de Pinterest "
+
+#: admin/views/admin.php:70
+msgid "The text for the button label"
+msgstr "El texto para la etiqueta del botón"
+
+#: admin/views/admin.php:76 admin/views/admin.php:113
+#: admin/views/admin.php:181 admin/views/admin.php:251
+msgid "Examples"
+msgstr "Ejemplos"
+
+#: admin/views/admin.php:84
+msgid "Pin Widget"
+msgstr "Widget de Pin"
+
+#: admin/views/admin.php:87
+msgid "to display the Pin Widget within your content."
+msgstr "para mostrar el Widget de Pin en su contenido."
+
+#: admin/views/admin.php:107
+msgid "The Pinterest pin URL you want to display"
+msgstr "La URL de pin de Pinterest que desea mostrar"
+
+#: admin/views/admin.php:121
+msgid "Board Widget"
+msgstr "Widget del Board"
+
+#: admin/views/admin.php:124
+msgid "to display the Board Widget within your content."
+msgstr "para mostrar el Widget del Board en su contenido."
+
+#: admin/views/admin.php:138 admin/views/admin.php:208
+msgid "Choices"
+msgstr "Opciones"
+
+#: admin/views/admin.php:145
+msgid "The Pinterest board URL you want to display"
+msgstr "LA URL del board de Pinterest que desea mostrar"
+
+#: admin/views/admin.php:146
+msgid "Any Pinterest board URL"
+msgstr "Cualquier URL del board de Pinterest "
+
+#: admin/views/admin.php:151
+msgid "The size of the board"
+msgstr "El tamaño del board"
+
+#: admin/views/admin.php:157 admin/views/admin.php:227
+msgid ""
+"The following options only take effect when size is set to custom, otherwise "
+"they will be ignored."
+msgstr ""
+"Las siguientes opciones solo tienen efecto cuando el tamaño está puesto a "
+"personalizado, de otra forma serán ignoradas."
+
+#: admin/views/admin.php:162
+msgid "The size of the images on the board"
+msgstr "El tamaño de las imágenes en el board"
+
+#: admin/views/admin.php:163 admin/views/admin.php:169
+#: admin/views/admin.php:175 admin/views/admin.php:233
+#: admin/views/admin.php:239 admin/views/admin.php:245
+msgid "Any number greater than"
+msgstr "Cualquier número mayor que"
+
+#: admin/views/admin.php:168
+msgid "The height of the board"
+msgstr "El largo del board"
+
+#: admin/views/admin.php:174
+msgid "The width of the board"
+msgstr "El ancho del board"
+
+#: admin/views/admin.php:191
+msgid "Profile Widget"
+msgstr "Widget del Perfil"
+
+#: admin/views/admin.php:194
+msgid "to display the Profile Widget within your content."
+msgstr "para mostrar el Widget del Perfil en su contenido."
+
+#: admin/views/admin.php:215
+msgid "The Pinterest username"
+msgstr "El usuario de Pinterest "
+
+#: admin/views/admin.php:216
+msgid "Any Pinterest username"
+msgstr "Cualquier usuario de Pinterest "
+
+#: admin/views/admin.php:221
+msgid "The size of the widget"
+msgstr "El tamaño del widget"
+
+#: admin/views/admin.php:232
+msgid "The size of the images on the widget"
+msgstr "El tamaño de las imágenes en el widget"
+
+#: admin/views/admin.php:238
+msgid "The height of the widget"
+msgstr "El largo del widget"
+
+#: admin/views/admin.php:244
+msgid "The width of the widget"
+msgstr "El ancho del widget"
+
+#. Plugin URI of the plugin/theme
+msgid "http://pinplugins.com/pinterest-widgets-wordpress-plugin/"
+msgstr "http://pinplugins.com/pinterest-widgets-wordpress-plugin/"
+
+#. Description of the plugin/theme
+msgid ""
+"Easily add a Pinterest Follow Button, Pin Widget, Board Widget and Profile "
+"Widget to your site. Includes shortcodes."
+msgstr ""
+"Adicione fácilmente un Botón de Seguir de Pinterest, un Widget de Pin, un "
+"Widget de Board y un Widget de Profile a su sitio. Incluye códigos cortos."
+
+#. Author of the plugin/theme
+msgid "Phil Derksen"
+msgstr "Phil Derksen"
+
+#. Author URI of the plugin/theme
+msgid "http://philderksen.com"
+msgstr "http://philderksen.com"

@@ -44,7 +44,11 @@ class Pinterest_Widgets_Admin {
 
 		$plugin = Pinterest_Widgets::get_instance();
 		$this->plugin_slug = $plugin->get_plugin_slug();
-
+		
+		// Load the plugin text domain for translations
+		//add_action( 'plugins_loaded', array( $this, 'plugin_textdomain' ) );
+		$this->plugin_textdomain();
+		
 		// Load admin style sheets.
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
 
@@ -63,6 +67,35 @@ class Pinterest_Widgets_Admin {
 		
 		// Add admin notice after plugin activation. Also check if should be hidden.
 		add_action( 'admin_notices', array( $this, 'admin_install_notice' ) );
+	}
+	
+	/**
+	 * Load the plugin text domain
+	 * 
+	 * @since 1.0.3
+	 */
+	function plugin_textdomain() {
+		
+		// Set filter for plugin's languages directory
+		$pw_lang_dir = dirname( plugin_basename( PW_MAIN_FILE ) ) . '/languages/';
+		$pw_lang_dir = apply_filters( 'pw_languages_directory', $pw_lang_dir );
+
+		// Traditional WordPress plugin locale filter
+		$locale        = apply_filters( 'plugin_locale',  get_locale(), 'pw' );
+		$mofile        = sprintf( '%1$s-%2$s.mo', 'pw', $locale );
+
+		// Setup paths to current locale file
+		$mofile_local  = $pw_lang_dir . $mofile;
+		$mofile_global = WP_LANG_DIR . '/pw/' . $mofile;
+
+		if ( file_exists( $mofile_global ) ) {
+			load_textdomain( 'pw', $mofile_global );
+		} elseif ( file_exists( $mofile_local ) ) {
+			load_textdomain( 'pw', $mofile_local );
+		} else {
+			// Load the default language files
+			load_plugin_textdomain( 'pw', false, $pw_lang_dir );
+		}
 	}
 	
 	/**

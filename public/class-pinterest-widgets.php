@@ -21,7 +21,7 @@ class Pinterest_Widgets {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.2';
+	const VERSION = '1.0.3';
 
 	/**
 	 * Unique identifier for this plugin.
@@ -88,6 +88,10 @@ class Pinterest_Widgets {
 		if( is_active_widget( false, false, 'pw_board_widget', true ) || is_active_widget( false, false, 'pw_follow_button_widget', true ) || 
 				is_active_widget( false, false, 'pw_pin_widget', true ) || is_active_widget( false, false, 'pw_profile_widget', true ) ) {
 			$loadJS = true;
+		}
+		
+		if( wp_script_is( 'pib-async-script-loader', 'enqueued' ) ) {
+			$loadJS = false;
 		}
 		
 		if( $loadJS ) {

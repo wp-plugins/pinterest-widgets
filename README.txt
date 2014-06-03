@@ -23,6 +23,8 @@ Includes:
 
 The "Pin It" Button widget is *not* included in this plugin and is instead included in the separate [Pinterest "Pin It" Button plugin](http://pinplugins.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinplugins.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets)), which we also created.
 
+Spanish and Serbian translations by Ogi Djuraskovic of [firstsiteguide.com](http://firstsiteguide.com/).
+
 [Follow this project on Github](https://github.com/pderksen/WP-Pinterest-Widgets).
 
 == Installation ==
@@ -73,6 +75,10 @@ Shortcode help available within the plugin admin.
 8. Board widget settings
 
 == Changelog ==
+
+= 1.0.3 =
+
+* Added Spanish and Serbian translations (thanks to Ogi Djuraskovic of [firstsiteguide.com](http://firstsiteguide.com/)).
 
 = 1.0.2 =
 

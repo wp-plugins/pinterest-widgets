@@ -1,0 +1,429 @@
+# Copyright (C) 2014 Pinterest Widgets
+# This file is distributed under the same license as the Pinterest Widgets package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinterest Widgets 1.0.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/pinterest-widgets\n"
+"POT-Creation-Date: 2014-05-20 07:12:17+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-26 08:24+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: admin/class-pinterest-widgets-admin.php:203
+msgid " Settings"
+msgstr "Postavke"
+
+#. #-#-#-#-#  plugin.pot (Pinterest Widgets 1.0.2)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: admin/class-pinterest-widgets-admin.php:204
+#: admin/class-pinterest-widgets-admin.php:252
+msgid "Pinterest Widgets"
+msgstr "Pinterest Widgets"
+
+#: admin/class-pinterest-widgets-admin.php:238
+msgid "Settings"
+msgstr "Postavke"
+
+#: admin/includes/admin-notices.php:25
+msgid "Settings updated."
+msgstr "Postavke updateovane."
+
+#: admin/includes/functions.php:123
+msgid "No items."
+msgstr "Nijedna postavka."
+
+#: admin/includes/register-settings.php:29
+msgid "Disable <code>pinit.js</code>"
+msgstr "Onemogući <code>pinit.js</code>"
+
+#: admin/includes/register-settings.php:30
+msgid ""
+"Disable output of <code>pinit.js</code>, the JavaScript file for all widgets "
+"from Pinterest."
+msgstr ""
+"Onemogući  output <code>pinit.js</code>,   JavaScript fajl za sve widgete sa "
+"Pinteresta."
+
+#: admin/includes/register-settings.php:37
+msgid "Save Settings"
+msgstr "Sačuvati postavke"
+
+#: admin/includes/register-settings.php:38
+msgid ""
+"Save your settings when uninstalling this plugin. Useful when upgrading or "
+"re-installing."
+msgstr ""
+"Sačuvati postavke kada deinstalirate ovaj plugin. Korisno kada upgradeujete "
+"ili reinstalirate"
+
+#: admin/includes/register-settings.php:52
+msgid "General Settings"
+msgstr "Opšte postavke"
+
+#: admin/includes/register-settings.php:142
+msgid ""
+"The callback function used for the <strong>%s</strong> setting is missing."
+msgstr "Poziv funkcije korišćen za <strong>%s</strong> postavku nedostaje."
+
+#: admin/includes/widget-board.php:27
+msgid "Pinterest Board Widget"
+msgstr "Pinterest Board Widget"
+
+#: admin/includes/widget-board.php:29
+msgid "Add a Pinterest Board Widget to any widget area."
+msgstr "Dodati Pinterest Board Widget u bio koje widget područje."
+
+#: admin/includes/widget-board.php:128
+#: admin/includes/widget-follow-button.php:111
+#: admin/includes/widget-pin.php:105 admin/includes/widget-profile.php:129
+msgid "Title (optional):"
+msgstr "Naslov (opcionalnol):"
+
+#: admin/includes/widget-board.php:132
+msgid "Pinterest Board URL:"
+msgstr "URL Pinterest tabele:"
+
+#: admin/includes/widget-board.php:136
+msgid "Board Size:"
+msgstr "Veličina tebele:"
+
+#: admin/includes/widget-board.php:138 admin/includes/widget-profile.php:139
+msgid "Square"
+msgstr "Kocka"
+
+#: admin/includes/widget-board.php:139 admin/includes/widget-profile.php:140
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: admin/includes/widget-board.php:140 admin/includes/widget-profile.php:141
+msgid "Header"
+msgstr "Header"
+
+#: admin/includes/widget-board.php:141 admin/includes/widget-profile.php:142
+msgid "Custom"
+msgstr "Custom"
+
+#: admin/includes/widget-board.php:145
+msgid "The following values are used only with a 'Custom' board size"
+msgstr "Sledeće vrednosti se koriste samo sa 'Custom' veličinom tabele"
+
+#: admin/includes/widget-board.php:148 admin/includes/widget-profile.php:149
+msgid "Image Width:"
+msgstr "Širina slike:"
+
+#: admin/includes/widget-board.php:152 admin/includes/widget-profile.php:153
+msgid "Board Height:"
+msgstr "Visina tabele:"
+
+#: admin/includes/widget-board.php:156 admin/includes/widget-profile.php:157
+msgid "Board Width:"
+msgstr "Širina tabele:"
+
+#: admin/includes/widget-follow-button.php:27
+msgid "Pinterest Follow Button"
+msgstr "Pinterest Follow dugme"
+
+#: admin/includes/widget-follow-button.php:29
+msgid "Add a Pinterest Follow Button to any widget area."
+msgstr "Dodati Pinterest Follow dugme za bilo koje widget područje."
+
+#: admin/includes/widget-follow-button.php:115
+#: admin/includes/widget-profile.php:133
+msgid "Pinterest Username:"
+msgstr "Pinterest korisničko ime:"
+
+#: admin/includes/widget-follow-button.php:119
+msgid "Button Label:"
+msgstr "Oznaka dugmeta:"
+
+#: admin/includes/widget-pin.php:27
+msgid "Pinterest Pin Widget"
+msgstr "Pinterest Pin Widget"
+
+#: admin/includes/widget-pin.php:29
+msgid "Add a Pinterest Pin Widget to any widget area."
+msgstr "Dodati  Pinterest Pin Widget u bilo koje widget područje."
+
+#: admin/includes/widget-pin.php:109
+msgid "Pin URL:"
+msgstr "Pin URL:"
+
+#: admin/includes/widget-profile.php:27
+msgid "Pinterest Profile Widget"
+msgstr "Pinterest Profile Widget"
+
+#: admin/includes/widget-profile.php:29
+msgid "Add a Pinterest Profile Widget to any widget area."
+msgstr "Dodati Pinterest Profile Widget u bilo koje widget područje."
+
+#: admin/includes/widget-profile.php:137
+msgid "Widget Size:"
+msgstr "Widget veličina:"
+
+#: admin/includes/widget-profile.php:146
+msgid "The following values are used only with a 'Custom' widget size"
+msgstr "Sledeće vrednosti se koriste samo unutar 'Custom' widget veličine"
+
+#: admin/views/admin-install-notice.php:27
+msgid " is now installed."
+msgstr "je instalirano.."
+
+#: admin/views/admin-install-notice.php:28
+msgid "Pinterest widgets are now active in Appearance"
+msgstr "Pinterest widgets su sada aktivni u Izgledu"
+
+#: admin/views/admin-install-notice.php:28
+msgid "Widgets"
+msgstr "Widgeti"
+
+#: admin/views/admin-sidebar.php:20
+msgid "Need an awesome \"Pin It\" button?"
+msgstr "Treba vam \"Pin It\" dugme?"
+
+#: admin/views/admin-sidebar.php:24
+msgid "Check out the features in \"Pin It\" Pro..."
+msgstr "Proverite funkcije u \"Pin It\" Pro..."
+
+#: admin/views/admin-sidebar.php:28
+msgid "Add \"Pin It\" buttons on image hover"
+msgstr " \"Pin It\" dugmad pod lebdenje slike"
+
+#: admin/views/admin-sidebar.php:29
+msgid "Add \"Pin It\" buttons under images"
+msgstr "\"Pin It\" dugmad pod slike"
+
+#: admin/views/admin-sidebar.php:30
+msgid "30 custom \"Pin It\" button designs"
+msgstr "30 custom \"Pin It\" dizajna dugmića"
+
+#: admin/views/admin-sidebar.php:31
+msgid "Upload your own button designs"
+msgstr "Uploaduj svoj dizajn dugmeta"
+
+#: admin/views/admin-sidebar.php:32
+msgid "Twitter, Facebook & G+ buttons"
+msgstr "Twitter, Facebook & G+ dugmad"
+
+#: admin/views/admin-sidebar.php:33
+msgid "Use with featured images"
+msgstr "Koristi sa slikama"
+
+#: admin/views/admin-sidebar.php:34
+msgid "Use with custom post types"
+msgstr "Koristi sa custom post tipovima"
+
+#: admin/views/admin-sidebar.php:35
+msgid "Customer support & auto updates"
+msgstr "Podrška mušterije & auto updateovi"
+
+#: admin/views/admin-sidebar.php:39
+msgid "Get all of these and more with Pinterest \"Pin It\" Button Pro!"
+msgstr "Nabavite sve ovo i više sa  Pinterest \"Pin It\" Button Pro!"
+
+#: admin/views/admin-sidebar.php:44
+msgid "Get \"Pin It\" Pro Now"
+msgstr "Nabavite \"Pin It\" Pro sada"
+
+#: admin/views/admin-sidebar.php:53
+msgid ""
+"Help us get noticed (and boost our egos) with a rating and short review."
+msgstr "Pomozite nam da nas primete sa ocenivanjem ili pohvalom."
+
+#: admin/views/admin-sidebar.php:57
+msgid "Rate this plugin on WordPress.org"
+msgstr "Oceniti ovaj plugin na WordPress.org"
+
+#: admin/views/admin-sidebar.php:67
+msgid "Community Support Forums"
+msgstr "Forumi za podršku"
+
+#: admin/views/admin-sidebar.php:74
+msgid "Recent News from PinterestPlugin.com"
+msgstr "Najnovije vesti sa  PinterestPlugin.com"
+
+#: admin/views/admin.php:24
+msgid "Go to Appearance"
+msgstr "Idite na izgled"
+
+#: admin/views/admin.php:25
+msgid "to add Pinterest widgets to your sidebar and other widget areas."
+msgstr ""
+"da biste dodali Pinterest widgete na vaš sidebar i ostale widget područja."
+
+#: admin/views/admin.php:38
+msgid "Shortcode Help"
+msgstr "Shortcode pomoć"
+
+#: admin/views/admin.php:42
+msgid "Follow Button"
+msgstr "Follow Button"
+
+#: admin/views/admin.php:45 admin/views/admin.php:87 admin/views/admin.php:124
+#: admin/views/admin.php:194
+msgid "Use the shortcode"
+msgstr "Koristite shortcode"
+
+#: admin/views/admin.php:45
+msgid "to display the Pinterest Follow Button within your content."
+msgstr "da prikaže Pinterest Follow Button unutar vašeg sadržaja"
+
+#: admin/views/admin.php:48 admin/views/admin.php:90 admin/views/admin.php:127
+#: admin/views/admin.php:197
+msgid "Use the function"
+msgstr "Koristi funkciju"
+
+#: admin/views/admin.php:49 admin/views/admin.php:91 admin/views/admin.php:128
+#: admin/views/admin.php:198
+msgid "to display within template or theme files."
+msgstr "da prikaže unutar template ili fajlova teme."
+
+#: admin/views/admin.php:52 admin/views/admin.php:94 admin/views/admin.php:131
+#: admin/views/admin.php:201
+msgid "Available Attributes"
+msgstr "Dostupni atributi"
+
+#: admin/views/admin.php:57 admin/views/admin.php:99 admin/views/admin.php:136
+#: admin/views/admin.php:206
+msgid "Attribute"
+msgstr "Atribut"
+
+#: admin/views/admin.php:58 admin/views/admin.php:100
+#: admin/views/admin.php:137 admin/views/admin.php:207
+msgid "Description"
+msgstr "Opis"
+
+#: admin/views/admin.php:59 admin/views/admin.php:101
+#: admin/views/admin.php:139 admin/views/admin.php:209
+msgid "Default"
+msgstr "Default"
+
+#: admin/views/admin.php:65
+msgid "Your Pinterest username"
+msgstr " Pinterest korisničko ime"
+
+#: admin/views/admin.php:70
+msgid "The text for the button label"
+msgstr "Tekst za oznaku dugmeta"
+
+#: admin/views/admin.php:76 admin/views/admin.php:113
+#: admin/views/admin.php:181 admin/views/admin.php:251
+msgid "Examples"
+msgstr "Primeri"
+
+#: admin/views/admin.php:84
+msgid "Pin Widget"
+msgstr "Pin Widget"
+
+#: admin/views/admin.php:87
+msgid "to display the Pin Widget within your content."
+msgstr "da prikažete Pin Widget unutar vašeg sadržaja."
+
+#: admin/views/admin.php:107
+msgid "The Pinterest pin URL you want to display"
+msgstr "URL Pinterest pina koji želite da prikažete"
+
+#: admin/views/admin.php:121
+msgid "Board Widget"
+msgstr "Board Widget"
+
+#: admin/views/admin.php:124
+msgid "to display the Board Widget within your content."
+msgstr "da pričaete Board Widget unutar vašeg sadržaja"
+
+#: admin/views/admin.php:138 admin/views/admin.php:208
+msgid "Choices"
+msgstr "Izbori"
+
+#: admin/views/admin.php:145
+msgid "The Pinterest board URL you want to display"
+msgstr "URL Pinterest tabele koju želite da prikažete"
+
+#: admin/views/admin.php:146
+msgid "Any Pinterest board URL"
+msgstr "URL Pinterest tabele"
+
+#: admin/views/admin.php:151
+msgid "The size of the board"
+msgstr "Veličina tabele"
+
+#: admin/views/admin.php:157 admin/views/admin.php:227
+msgid ""
+"The following options only take effect when size is set to custom, otherwise "
+"they will be ignored."
+msgstr ""
+"Sledeće opcije će imati efekta kada je veličina podešena na custom, inače će "
+"biti ignorisane."
+
+#: admin/views/admin.php:162
+msgid "The size of the images on the board"
+msgstr "Veličina slika na tabeli"
+
+#: admin/views/admin.php:163 admin/views/admin.php:169
+#: admin/views/admin.php:175 admin/views/admin.php:233
+#: admin/views/admin.php:239 admin/views/admin.php:245
+msgid "Any number greater than"
+msgstr "Bilo koji broj veći od"
+
+#: admin/views/admin.php:168
+msgid "The height of the board"
+msgstr "Visina table"
+
+#: admin/views/admin.php:174
+msgid "The width of the board"
+msgstr "Širina table"
+
+#: admin/views/admin.php:191
+msgid "Profile Widget"
+msgstr "Profile Widget"
+
+#: admin/views/admin.php:194
+msgid "to display the Profile Widget within your content."
+msgstr "prikaži Profile Widget unutar sadržaja."
+
+#: admin/views/admin.php:215
+msgid "The Pinterest username"
+msgstr "Pinterest korisničko ime"
+
+#: admin/views/admin.php:216
+msgid "Any Pinterest username"
+msgstr "Bilo koje Pinterest korisničko ime"
+
+#: admin/views/admin.php:221
+msgid "The size of the widget"
+msgstr "Veličina widget"
+
+#: admin/views/admin.php:232
+msgid "The size of the images on the widget"
+msgstr "Veličina slika na widgetu"
+
+#: admin/views/admin.php:238
+msgid "The height of the widget"
+msgstr "Visina widgeta"
+
+#: admin/views/admin.php:244
+msgid "The width of the widget"
+msgstr "Širina widgeta"
+
+#. Plugin URI of the plugin/theme
+msgid "http://pinplugins.com/pinterest-widgets-wordpress-plugin/"
+msgstr "http://pinplugins.com/pinterest-widgets-wordpress-plugin/"
+
+#. Description of the plugin/theme
+msgid ""
+"Easily add a Pinterest Follow Button, Pin Widget, Board Widget and Profile "
+"Widget to your site. Includes shortcodes."
+msgstr ""
+"Dodajte lako Pinterest Follow dgme, Pin Widget, Board Widget i Profile "
+"Widget tna vaš sajt sa shortcodes"
+
+#. Author of the plugin/theme
+msgid "Phil Derksen"
+msgstr "Phil Derksen"
+
+#. Author URI of the plugin/theme
+msgid "http://philderksen.com"
+msgstr "http://philderksen.com"
