@@ -214,14 +214,8 @@ class Pinterest_Widgets_Admin {
 		$screen = get_current_screen();
 
 		if ( $this->plugin_screen_hook_suffix == $screen->id ) {
-			// Plugin admin custom Bootstrap CSS. Tack on plugin version.
-			wp_enqueue_style( $this->plugin_slug .'-bootstrap', plugins_url( 'assets/css/bootstrap-custom.css', __FILE__ ), array(), Pinterest_Widgets::VERSION );
-
-			// Plugin admin custom Flat UI CSS. Tack on plugin version.
-			wp_enqueue_style( $this->plugin_slug .'-flat-ui', plugins_url( 'assets/css/flat-ui-custom.css', __FILE__ ), array( $this->plugin_slug .'-bootstrap' ), Pinterest_Widgets::VERSION );
-
 			// Plugin admin CSS. Tack on plugin version.
-			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array( $this->plugin_slug .'-flat-ui' ), Pinterest_Widgets::VERSION );
+			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), Pinterest_Widgets::VERSION );
 		}
 	}
 

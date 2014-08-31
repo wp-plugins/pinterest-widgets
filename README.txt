@@ -1,8 +1,8 @@
 === Pinterest Widgets ===
 Contributors: pderksen, nickyoung87
 Tags: pinterest, widgets, follow button, pin widget, board widget, profile widget, social, social media, image, images, photo, photos, social button
-Requires at least: 3.6.1
-Tested up to: 3.9
+Requires at least: 3.7.4
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -76,6 +76,10 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
+= 1.0.4 =
+
+* Tested with WordPress 4.0.
+
 = 1.0.3 =
 
 * Added Spanish and Serbian translations (thanks to Ogi Djuraskovic of [firstsiteguide.com](http://firstsiteguide.com/)).
@@ -91,4 +95,4 @@ Shortcode help available within the plugin admin.
 
 = 1.0.0 =
 
-* Initial release
+* Initial release.
