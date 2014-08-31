@@ -94,6 +94,29 @@ function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 }
 
 /**
+ * Google Analytics campaign URL.
+ *
+ * @since     1.0.3
+ *
+ * @param   string  $base_url Plain URL to navigate to
+ * @param   string  $source   GA "source" tracking value
+ * @param   string  $medium   GA "medium" tracking value
+ * @param   string  $campaign GA "campaign" tracking value
+ * @return  string  $url     Full Google Analytics campaign URL
+ */
+function pw_ga_campaign_url( $base_url, $source, $medium, $campaign ) {
+	// $medium examples: 'sidebar_link', 'banner_image'
+
+	$url = add_query_arg( array(
+		'utm_source'   => $source,
+		'utm_medium'   => $medium,
+		'utm_campaign' => $campaign
+	), $base_url );
+
+	return $url;
+}
+
+/**
  * Render RSS items from pinplugins.com in unordered list.
  * http://codex.wordpress.org/Function_Reference/fetch_feed
  * Based on pib_rss_news() in Pin it button plugin.
@@ -120,7 +143,7 @@ function pw_rss_news() {
 
 	<ul>
 		<?php if ($maxitems == 0): ?>
-			<li><?php _e( 'No items.', 'ps' ); ?></li>
+			<li><?php _e( 'No items.', 'pw' ); ?></li>
 		<?php else: ?>
 			<?php
 			// Loop through each feed item and display each item as a hyperlink.
@@ -135,7 +158,7 @@ function pw_rss_news() {
 				), esc_url( $item->get_permalink() ) ); ?>
 
 				<li>
-					&raquo; <a href="<?php echo $post_url; ?>" target="_blank" class="pw-external-link"><?php echo esc_html( $item->get_title() ); ?></a>
+					&raquo; <a href="<?php echo $post_url; ?>" target="_blank"><?php echo esc_html( $item->get_title() ); ?></a>
 				</li>
 			<?php endforeach; ?>
 		<?php endif; ?>

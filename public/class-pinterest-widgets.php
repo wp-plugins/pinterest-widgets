@@ -21,7 +21,7 @@ class Pinterest_Widgets {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.3';
+	const VERSION = '1.0.4';
 
 	/**
 	 * Unique identifier for this plugin.
