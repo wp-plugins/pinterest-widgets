@@ -21,7 +21,7 @@ class Pinterest_Widgets {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.5';
+	const VERSION = '1.0.6';
 
 	/**
 	 * Unique identifier for this plugin.
@@ -61,7 +61,31 @@ class Pinterest_Widgets {
 		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
 		
 		// Add public scripts
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'init', array( $this, 'enqueue_scripts' ) );
+		
+		// Load scripts when posts load so we know if we need to include them or not
+		add_filter( 'the_posts', array( $this, 'load_scripts' ) );
+	}
+	
+	function load_scripts( $posts ) {
+		
+		if ( empty( $posts ) ) {
+			return $posts;
+		}
+		
+		foreach ( $posts as $post ) {
+			if ( strpos( $post->post_content, '[pin_follow' ) !== false || 
+				strpos( $post->post_content, '[pin_widget' ) !== false || 
+				strpos( $post->post_content, '[pin_board' ) !== false ||
+				strpos( $post->post_content, '[pin_profile' ) !== false ) {
+				// Load JS
+				wp_enqueue_script( 'pinterest-pinit-js' );
+				
+				break;
+			}
+		}
+
+		return $posts;
 	}
 	
 	/**
@@ -71,35 +95,9 @@ class Pinterest_Widgets {
 	 *
 	*/
 	public function enqueue_scripts() {
-		
-		global $pw_options, $post;
-		
-		$content = $post->post_content;
-		
-		$loadJS = false;
-		
-		// Need to check if there are any widgets or shortcodes before loading the JS so that we only add JS if needed
-		// Check for shortcodes
-		if( has_shortcode( $content, 'pin_follow' ) || has_shortcode( $content, 'pin_widget' ) || has_shortcode( $content, 'pin_board' ) || has_shortcode( $content, 'pin_profile' ) ) {
-			$loadJS = true;
-		}
-		
-		// Check for widgets
-		if( is_active_widget( false, false, 'pw_board_widget', true ) || is_active_widget( false, false, 'pw_follow_button_widget', true ) || 
-				is_active_widget( false, false, 'pw_pin_widget', true ) || is_active_widget( false, false, 'pw_profile_widget', true ) ) {
-			$loadJS = true;
-		}
-		
-		if( wp_script_is( 'pib-async-script-loader', 'enqueued' ) ) {
-			$loadJS = false;
-		}
-		
-		if( $loadJS ) {
-			// Enqueue pinit.js
-			if( empty( $pw_options['no_pinit_js'] ) ) {
-				wp_enqueue_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), null, true );
-			}
-		}
+		//if( ! wp_script_is( 'pib-async-script-loader', 'enqueued' ) ) {
+			wp_register_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), self::VERSION, true );
+		//}
 	}
 	
 	/**

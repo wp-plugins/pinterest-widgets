@@ -32,6 +32,13 @@ function pw_register_settings() {
 						'Ouputting <code>pinit.js</code> more than once on a page can cause conflicts.', 'pw' ) . '</p>',
 				'type' => 'checkbox'
 			),
+			'always_enqueue' => array(
+				'id'   => 'always_enqueue',
+				'name' => __( 'Always Enqueue Scripts & Styles', 'pw' ),
+				'desc' => __( 'Enqueue this plugin\'s scripts and styles on every post and page.', 'pw' ) . '<br/>' .
+				          '<p class="description">' . __( 'Useful if using shortcodes in widgets or other non-standard locations.', 'pw' ) . '</p>',
+				'type' => 'checkbox'
+			),
 			'uninstall_save_settings' => array(
 				'id'   => 'uninstall_save_settings',
 				'name' => __( 'Save Settings', 'pw' ),
@@ -157,6 +164,7 @@ function pw_get_settings() {
 		$general = get_option( 'pw_settings_general' );
 		
 		$general['uninstall_save_settings'] = 1;
+		$general['always_enqueue']          = 1;
 		
 		update_option( 'pw_settings_general', $general );
 		

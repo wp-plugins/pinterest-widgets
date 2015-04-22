@@ -40,10 +40,24 @@ class Pinterest_Widgets_Admin {
 	 */
 	private function __construct() {
 		
-		$this->setup_constants();
-
 		$plugin = Pinterest_Widgets::get_instance();
 		$this->plugin_slug = $plugin->get_plugin_slug();
+		
+		$old = get_option( 'pw_version' );
+		
+		if( version_compare( $old, $plugin::VERSION, '<' ) ) {
+			delete_option( 'pw_upgrade_has_run' );
+		}
+		
+		if( false === get_option( 'pw_upgrade_has_run' ) ) {
+			$this->upgrade();
+		}
+		
+		update_option( 'pw_version', $plugin::VERSION );
+		
+		$this->setup_constants();
+
+		
 		
 		// Load the plugin text domain for translations
 		//add_action( 'plugins_loaded', array( $this, 'plugin_textdomain' ) );
@@ -60,13 +74,18 @@ class Pinterest_Widgets_Admin {
 		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
 		
 		// Make sure we load our include files
-		add_action( 'init', array( $this, 'includes' ), 0 );
+		//add_action( 'init', array( $this, 'includes' ), 0 );
+		$this->includes();
 		
 		// Check WP version
 		add_action( 'admin_init', array( $this, 'check_wp_version' ) );
 		
 		// Add admin notice after plugin activation. Also check if should be hidden.
 		add_action( 'admin_notices', array( $this, 'admin_install_notice' ) );
+	}
+	
+	public function upgrade() {
+		include_once( PW_DIR_PATH . 'admin/includes/upgrade.php' );
 	}
 	
 	/**
@@ -111,7 +130,7 @@ class Pinterest_Widgets_Admin {
 	}
 	
 	public function setup_constants() {
-		if( ! defined( 'PINPLUGIN_BASE_URL' ) ) {
+		if ( ! defined( 'PINPLUGIN_BASE_URL' ) ) {
 			define( 'PINPLUGIN_BASE_URL', 'http://pinplugins.com/' );
 		}
 	}

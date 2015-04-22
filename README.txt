@@ -1,9 +1,9 @@
 === Pinterest Widgets ===
 Contributors: pderksen, nickyoung87
 Tags: pinterest, widgets, follow button, pin widget, board widget, profile widget, social, social media, image, images, photo, photos, social button
-Requires at least: 3.8.5
-Tested up to: 4.1
-Stable tag: trunk
+Requires at least: 3.9.3
+Tested up to: 4.2
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,7 +61,7 @@ Your theme must implement **wp_footer()** in the footer.php file, otherwise Java
 
 Shortcode help available within the plugin admin.
 
-[Follow this project on Github](https://github.com/pderksen/WP-Pinterest-Widgets).
+[Follow this project on Github](https://github.com/pderksen/WP-Pinterest-Widgets)
 
 == Screenshots ==
 
@@ -76,7 +76,13 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
-= 1.0.5 = 
+= 1.0.6 - April 22, 2015 =
+
+* Updated calls to add_query_arg to prevent any possible XSS attacks.
+* Added option to always enqueue scripts & styles (enabled by default).
+* Tested up to WordPress 4.2.
+
+= 1.0.5 =
 
 * Tested up to WordPress 4.1.
 * Simplified text domain function.

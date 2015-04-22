@@ -7,13 +7,13 @@
  * @author    Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  * @license   GPL-2.0+
  * @link      http://pinplugins.com
- * @copyright 2014 Phil Derksen
+ * @copyright 2014-2015 Phil Derksen
  *
  * @wordpress-plugin
  * Plugin Name: Pinterest Widgets
  * Plugin URI: http://pinplugins.com/pinterest-widgets-wordpress-plugin/
  * Description: Easily add a Pinterest Follow Button, Pin Widget, Board Widget and Profile Widget to your site. Includes shortcodes.
- * Version: 1.0.5
+ * Version: 1.0.6
  * Author: Phil Derksen
  * Author URI: http://philderksen.com
  * License: GPL-2.0+
@@ -30,6 +30,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! defined( 'PW_MAIN_FILE' ) ) {
 	define ( 'PW_MAIN_FILE', __FILE__ );
+}
+
+
+if ( ! defined( 'PW_DIR_PATH' ) ) {
+	define( 'PW_DIR_PATH', plugin_dir_path( __FILE__ ) );
 }
 
 // Admin class included here because widgets need both admin and public side so we need this here until we come up with a better solution

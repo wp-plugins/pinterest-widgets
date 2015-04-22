@@ -107,11 +107,11 @@ function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 function pw_ga_campaign_url( $base_url, $source, $medium, $campaign ) {
 	// $medium examples: 'sidebar_link', 'banner_image'
 
-	$url = add_query_arg( array(
+	$url = esc_url( add_query_arg( array(
 		'utm_source'   => $source,
 		'utm_medium'   => $medium,
 		'utm_campaign' => $campaign
-	), $base_url );
+	), $base_url ) );
 
 	return $url;
 }
@@ -148,14 +148,14 @@ function pw_rss_news() {
 			<?php
 			// Loop through each feed item and display each item as a hyperlink.
 			foreach ( $rss_items as $item ): ?>
-				<?php $post_url = add_query_arg( array(
+				<?php $post_url = esc_url( add_query_arg( array(
 
 					// Google Analytics campaign URL
 					'utm_source'   => 'pinterest_widgets',
 					'utm_medium'   => 'sidebar_link',
 					'utm_campaign' => 'blog_post_link'
 
-				), esc_url( $item->get_permalink() ) ); ?>
+				), $item->get_permalink() ) ); ?>
 
 				<li>
 					&raquo; <a href="<?php echo $post_url; ?>" target="_blank"><?php echo esc_html( $item->get_title() ); ?></a>

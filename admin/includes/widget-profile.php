@@ -29,6 +29,15 @@ class PW_Profile_Widget extends WP_Widget {
 				'description'	=>	__( 'Add a Pinterest Profile Widget to any widget area.', 'pw' )
 			)
 		);
+		
+		if ( is_active_widget( false, false, $this->id_base ) ) {
+			// Load JS
+			add_action( 'wp_enqueue_scripts', array( $this, 'load_script' ) );
+		}
+	}
+	
+	function load_script() { 
+		wp_enqueue_script( 'pinterest-pinit-js' );
 	}
 	
 	/**

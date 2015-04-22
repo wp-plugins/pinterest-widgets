@@ -22,9 +22,13 @@ if( ! empty( $general['uninstall_save_settings'] ) ) {
 	
 	// Delete our first pass through variable
 	delete_option( 'pw_has_run' );
+	delete_option( 'pw_upgrade_has_run' );
 	
 	// Delete general settings option
 	delete_option( 'pw_settings_general' );
+	
+	// Delete misc options
+	delete_option( 'pw_version' );
 	
 	// Delete any widgets left behind
 	delete_option( 'widget_pw_board_widget' );
