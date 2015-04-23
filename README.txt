@@ -3,7 +3,7 @@ Contributors: pderksen, nickyoung87
 Tags: pinterest, widgets, follow button, pin widget, board widget, profile widget, social, social media, image, images, photo, photos, social button
 Requires at least: 3.9.3
 Tested up to: 4.2
-Stable tag: 1.0.6.1
+Stable tag: 1.0.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,11 @@ Shortcode help available within the plugin admin.
 8. Board widget settings
 
 == Changelog ==
+
+= 1.0.6.2 - April 24, 2015 =
+
+* Fixed upgrade routine check failing in some cases (take 2). Affects only PHP 5.2.x users.
+* Fix settings link on plugin listing page.
 
 = 1.0.6.1 - April 23, 2015 =
 

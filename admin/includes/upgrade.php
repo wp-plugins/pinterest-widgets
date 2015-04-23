@@ -9,15 +9,14 @@
  */
 function pw_upgrade() {
 	
-	$version = get_option( 'pw_version' );
+	$existing_version = get_option( 'pw_version' );
 	
 	// Check if under version 2 and run the v2 upgrade if we are
-	if( version_compare( $version, '1.0.6', '<' ) && false === get_option( 'pw_upgrade_has_run' ) ) {
+	if( version_compare( $existing_version, '1.0.6', '<' ) && false === get_option( 'pw_upgrade_has_run' ) ) {
 		pw_106_upgrade();
 	}
 	
-	$new_version = Pinterest_Widgets::get_instance();
-	update_option( 'pw_version', $new_version::VERSION );
+	update_option( 'pw_version', Pinterest_Widgets::get_plugin_version() );
 	
 	add_option( 'pw_upgrade_has_run', 1 );
 }
