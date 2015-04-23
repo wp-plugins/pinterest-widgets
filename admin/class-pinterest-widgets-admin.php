@@ -45,7 +45,7 @@ class Pinterest_Widgets_Admin {
 		
 		$old = get_option( 'pw_version' );
 		
-		if( version_compare( $old, $plugin::VERSION, '<' ) ) {
+		if( version_compare( $old, $plugin->get_plugin_version(), '<' ) ) {
 			delete_option( 'pw_upgrade_has_run' );
 		}
 		
